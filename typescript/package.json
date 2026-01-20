@@ -1,7 +1,7 @@
 {
   "name": "fairspec-cardealer",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "slug": "fairspec-cardealer",
   "title": "Fairspec Cardealer",
   "description": "Fairspec Cardealer is a data exchange format for car dealerships. It is developed on top of the Fairspec standard",

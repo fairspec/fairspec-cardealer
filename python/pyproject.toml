@@ -1,6 +1,6 @@
 [project]
 name = "fairspec-cardealer"
-version = "0.2.0"
+version = "0.2.1"
 description = "Fairspec Cardealer is a data exchange format for car dealerships. It is developed on top of the Fairspec standard"
 readme = "README.md"
 requires-python = ">=3.12"

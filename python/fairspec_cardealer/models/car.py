@@ -56,7 +56,7 @@ class Car(BaseModel):
     """
     The title or name of the car listing
     """
-    url: str = Field(..., examples=['https://example.com/cars/tesla-model-3-2023'])
+    url: str = Field(..., examples=['https://example.com/cars/tesla-model-3-2025'])
     """
     URL to the car listing
     """
