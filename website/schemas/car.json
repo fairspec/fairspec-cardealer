@@ -1,7 +1,7 @@
 {
   "$schema": "https://fairspec.org/profiles/0.1.0/table.json",
   "title": "Car",
-  "description": "A schema describing a car",
+  "description": "A table schema describing a car",
   "primaryKey": ["url"],
   "foreignKeys": [
     {

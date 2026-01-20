@@ -1,7 +1,7 @@
 {
   "$schema": "https://fairspec.org/profiles/0.1.0/table.json",
   "title": "Dealer",
-  "description": "A schema describing a car dealer",
+  "description": "A table schema describing a car dealer",
   "primaryKey": ["url"],
   "required": ["title", "country", "region", "city", "address", "url"],
   "properties": {
