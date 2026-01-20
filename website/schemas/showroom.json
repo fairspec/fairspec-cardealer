@@ -1,99 +1,71 @@
 {
-  "$schema": "https://datapackage.org/profiles/2.0/tableschema.json",
+  "$schema": "https://fairspec.org/profiles/0.1.0/table.json",
   "title": "Showroom",
   "description": "A schema describing a car dealer showroom",
   "primaryKey": ["id"],
-  "fieldsMatch": "equal",
-  "fields": [
-    {
-      "name": "id",
+  "required": ["id", "title", "country", "region", "city", "address"],
+  "properties": {
+    "id": {
       "type": "string",
       "description": "Unique identifier of the showroom",
-      "examples": ["showroom-downtown-123"],
-      "constraints": {
-        "required": true
-      }
+      "examples": ["showroom-downtown-123"]
     },
-    {
-      "name": "title",
+    "title": {
       "type": "string",
       "description": "The name of the showroom",
-      "examples": ["Downtown Auto Gallery"],
-      "constraints": {
-        "required": true
-      }
+      "examples": ["Downtown Auto Gallery"]
     },
-    {
-      "name": "country",
+    "country": {
       "type": "string",
       "description": "Country where the showroom is located",
-      "examples": ["United States"],
-      "constraints": {
-        "required": true
-      }
+      "examples": ["United States"]
     },
-    {
-      "name": "region",
+    "region": {
       "type": "string",
       "description": "State or region within the country",
-      "examples": ["California"],
-      "constraints": {
-        "required": true
-      }
+      "examples": ["California"]
     },
-    {
-      "name": "city",
+    "city": {
       "type": "string",
       "description": "Closest city where the showroom is located",
-      "examples": ["Los Angeles"],
-      "constraints": {
-        "required": true
-      }
+      "examples": ["Los Angeles"]
     },
-    {
-      "name": "address",
+    "address": {
       "type": "string",
       "description": "Street address of the showroom",
-      "examples": ["123 Main Street"],
-      "constraints": {
-        "required": true
-      }
+      "examples": ["123 Main Street"]
     },
-    {
-      "name": "postcode",
+    "postcode": {
       "type": "string",
       "description": "Postal code of the showroom location",
       "examples": ["90210"]
     },
-    {
-      "name": "phone",
+    "phone": {
       "type": "string",
       "description": "Contact phone number for the showroom",
       "examples": ["+1-555-123-4567"]
     },
-    {
-      "name": "email",
+    "email": {
       "type": "string",
+      "format": "email",
       "description": "Contact email address for the showroom",
       "examples": ["info@downtownauto.com"]
     },
-    {
-      "name": "url",
+    "url": {
       "type": "string",
+      "format": "url",
       "description": "URL to the showroom",
       "examples": ["https://www.downtownauto.com"]
     },
-    {
-      "name": "lon",
+    "lon": {
       "type": "number",
       "description": "Longitude coordinate of the showroom location",
       "examples": [-118.2437]
     },
-    {
-      "name": "lat",
+    "lat": {
       "type": "number",
       "description": "Latitude coordinate of the showroom location",
       "examples": [34.0522]
     }
-  ]
+  }
 }
