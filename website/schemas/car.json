@@ -42,7 +42,7 @@
       "type": "string",
       "format": "url",
       "description": "URL to the car listing",
-      "examples": ["https://example.com/cars/tesla-model-3-2023"]
+      "examples": ["https://example.com/cars/tesla-model-3-2025"]
     },
     "price": {
       "type": "number",
