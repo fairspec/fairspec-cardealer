@@ -1,3 +1,3 @@
-# Cardealer DP
+# Fairspec Cardealer
 
-Cardealer DP (Car Dealer Data Package) is a data exchange format that helps car dealerships share their car listings. It is developed on top of the Data Package standard
+Fairspec Cardealer is a data exchange format for car dealerships. It is developed on top of the Fairspec standard

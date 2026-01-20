@@ -1,13 +1,13 @@
 {
   "name": "project",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "private": true,
-  "slug": "fairspec-extension",
-  "title": "Fairspec Extension",
-  "description": "Fairspec Extension is a Git repository template for rapid Fairspec extension development",
-  "repository": "https://github.com/fairspec/fairspec-extension",
-  "homepage": "https://fairspec.github.io/fairspec-extension",
+  "slug": "fairspec-cardealer",
+  "title": "Fairspec Cardealer",
+  "description": "Fairspec Cardealer is a data exchange format for car dealerships. It is developed on top of the Fairspec standard",
+  "repository": "https://github.com/fairspec/fairspec-cardealer",
+  "homepage": "https://fairspec.github.io/fairspec-cardealer",
   "author": "Evgeny Karev",
   "engines": {
     "node": "^24.0.0",
@@ -55,3 +55,4 @@
   },
   "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }
+

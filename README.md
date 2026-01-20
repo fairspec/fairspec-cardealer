@@ -1,3 +1,3 @@
-# Fairspec Extension
+# Fairspec Cardealer
 
-Fairspec Extension is a Git repository template for rapid Fairspec extension development.
+Fairspec Cardealer is a data exchange format for car dealerships. It is developed on top of the Fairspec standard

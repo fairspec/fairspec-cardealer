@@ -1,7 +1,11 @@
-import type * as standard from "frictionless-ts"
-import type * as extension from "./profile.ts"
+import * as standard from "@fairspec/metadata"
+import { z } from "zod"
+import * as extension from "./models/dataset.ts"
 
-export type Resource = standard.Resource & extension.Resource
-export type Package = standard.Package & extension.Package
+export * from "./models/index.ts"
 
-export type * from "./schemas/index.ts"
+export const Dataset = z.intersection(standard.Dataset, extension.Dataset)
+export const Resource = z.intersection(standard.Resource, extension.Resource)
+
+export type Dataset = z.infer<typeof Dataset>
+export type Resource = z.infer<typeof Resource>
