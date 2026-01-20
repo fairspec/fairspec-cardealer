@@ -2,53 +2,53 @@
 
 from __future__ import annotations
 
-from typing import TypedDict
+from typing import Optional
 
-from typing_extensions import NotRequired
+from pydantic import BaseModel, EmailStr, Field
 
 
-class Dealer(TypedDict):
-    title: str
+class Dealer(BaseModel):
+    title: str = Field(..., examples=['Downtown Auto Gallery'])
     """
     The name of the dealer
     """
-    country: str
+    country: str = Field(..., examples=['United States'])
     """
     Country where the dealer is located
     """
-    region: str
+    region: str = Field(..., examples=['California'])
     """
     State or region within the country
     """
-    city: str
+    city: str = Field(..., examples=['Los Angeles'])
     """
     Closest city where the dealer is located
     """
-    address: str
+    address: str = Field(..., examples=['123 Main Street'])
     """
     Street address of the dealer
     """
-    postcode: NotRequired[str]
+    postcode: Optional[str] = Field(None, examples=['90210'])
     """
     Postal code of the dealer location
     """
-    phone: NotRequired[str]
+    phone: Optional[str] = Field(None, examples=['+1-555-123-4567'])
     """
     Contact phone number for the dealer
     """
-    email: NotRequired[str]
+    email: Optional[EmailStr] = Field(None, examples=['info@downtownauto.com'])
     """
     Contact email address for the dealer
     """
-    url: str
+    url: str = Field(..., examples=['https://www.downtownauto.com'])
     """
     URL to the dealer website
     """
-    lon: NotRequired[float]
+    lon: Optional[float] = Field(None, examples=[-118.2437])
     """
     Longitude coordinate of the dealer location
     """
-    lat: NotRequired[float]
+    lat: Optional[float] = Field(None, examples=[34.0522])
     """
     Latitude coordinate of the dealer location
     """

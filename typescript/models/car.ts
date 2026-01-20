@@ -1,107 +1,31 @@
 // biome-ignore-all format: DO NOT UPDATE this @generated file
+import { z } from "zod";
 
-/**
- * A schema describing a car
- */
-export interface Car {
-  /**
-   * Unique identifier for the showroom where the car is located. If not provided the car is considered located at the dealers's main address
-   */
-  showroomId?: string
-  /**
-   * The title or name of the car listing
-   */
-  title: string
-  /**
-   * URL to the car listing
-   */
-  url: string
-  /**
-   * The price of the car in the currency specified
-   */
-  price: number
-  /**
-   * Currency of the price
-   */
-  currency: string
-  /**
-   * Year of first registration (1900-2100)
-   */
-  year?: number
-  /**
-   * Odometer reading in kilometers
-   */
-  mileage: number
-  /**
-   * Car brand/manufacturer
-   */
-  brand: string
-  /**
-   * Car model name
-   */
-  model: string
-  /**
-   * Specific version or trim level
-   */
-  version: string
-  /**
-   * Fuel type
-   */
-  fuel: string
-  /**
-   * Transmission type
-   */
-  gearbox: string
-  /**
-   * Vehicle category/body type
-   */
-  category: string
-  /**
-   * Exterior color
-   */
-  color: string
-  /**
-   * Number of doors identifier
-   */
-  door: string
-  /**
-   * Engine power in horsepower
-   */
-  power?: number
-  /**
-   * Engine displacement in cubic centimeters
-   */
-  cubics?: number
-  /**
-   * Number of seats
-   */
-  seats?: number
-  /**
-   * Number of previous owners
-   */
-  owners?: number
-  /**
-   * Month of first registration (1-12)
-   */
-  month?: number
-  /**
-   * Warranty duration in months
-   */
-  warranty?: number
-  /**
-   * Electric vehicle range in kilometers
-   */
-  range?: number
-  /**
-   * Battery capacity in kWh for electric vehicles
-   */
-  battery?: number
-  /**
-   * License plate number
-   */
-  plate?: string
-  /**
-   * Vehicle Identification Number
-   */
-  vin?: string
-}
+export const Car = z.object({
+    showroomId: z.string().optional(),
+    title: z.string(),
+    url: z.string(),
+    price: z.number(),
+    currency: z.string(),
+    year: z.number().optional(),
+    mileage: z.number(),
+    brand: z.string(),
+    model: z.string(),
+    version: z.string(),
+    fuel: z.union([z.literal("diesel"), z.literal("petrol"), z.literal("hybrid"), z.literal("electric")]),
+    gearbox: z.union([z.literal("manual"), z.literal("auto")]),
+    category: z.union([z.literal("small"), z.literal("estate"), z.literal("saloon"), z.literal("suv"), z.literal("van"), z.literal("sport"), z.literal("cabrio")]),
+    color: z.union([z.literal("grey"), z.literal("black"), z.literal("white"), z.literal("blue"), z.literal("red"), z.literal("green"), z.literal("yellow"), z.literal("orange")]),
+    door: z.union([z.literal("twothree"), z.literal("fourfive"), z.literal("sixseven")]),
+    power: z.number().optional(),
+    cubics: z.number().optional(),
+    seats: z.number().optional(),
+    owners: z.number().optional(),
+    month: z.number().optional(),
+    warranty: z.number().optional(),
+    range: z.number().optional(),
+    battery: z.number().optional(),
+    plate: z.string().optional(),
+    vin: z.string().optional()
+});
+export type Car = z.infer<typeof Car>

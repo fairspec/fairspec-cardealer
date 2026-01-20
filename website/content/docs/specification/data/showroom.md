@@ -2,12 +2,11 @@
 title: Showroom
 ---
 
-<p>A schema describing a car dealer showroom</p>
 <h2>Primary Key</h2>
 <p>
   <code>id</code>
 </p>
-<h2>Fields</h2>
+<h2>Columns</h2>
 <table>
   <colgroup>
     <col width="20%"/>
@@ -30,19 +29,6 @@ title: Showroom
       </td>
       <td>
         <p>Unique identifier of the showroom</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>showroom-downtown-123</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -56,19 +42,6 @@ title: Showroom
       </td>
       <td>
         <p>The name of the showroom</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>Downtown Auto Gallery</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -82,19 +55,6 @@ title: Showroom
       </td>
       <td>
         <p>Country where the showroom is located</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>United States</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -108,19 +68,6 @@ title: Showroom
       </td>
       <td>
         <p>State or region within the country</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>California</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -134,19 +81,6 @@ title: Showroom
       </td>
       <td>
         <p>Closest city where the showroom is located</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>Los Angeles</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -160,19 +94,6 @@ title: Showroom
       </td>
       <td>
         <p>Street address of the showroom</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>123 Main Street</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -186,12 +107,6 @@ title: Showroom
       </td>
       <td>
         <p>Postal code of the showroom location</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>90210</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -205,12 +120,6 @@ title: Showroom
       </td>
       <td>
         <p>Contact phone number for the showroom</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>+1-555-123-4567</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -224,15 +133,9 @@ title: Showroom
       </td>
       <td>
         <p>Contact email address for the showroom</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>info@downtownauto.com</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>string</code>
+        <code>email</code>
       </td>
     </tr>
     <tr>
@@ -243,15 +146,9 @@ title: Showroom
       </td>
       <td>
         <p>URL to the showroom</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>https://www.downtownauto.com</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>string</code>
+        <code>url</code>
       </td>
     </tr>
     <tr>
@@ -262,12 +159,6 @@ title: Showroom
       </td>
       <td>
         <p>Longitude coordinate of the showroom location</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>-118.2437</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>number</code>
@@ -281,12 +172,6 @@ title: Showroom
       </td>
       <td>
         <p>Latitude coordinate of the showroom location</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>34.0522</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>number</code>

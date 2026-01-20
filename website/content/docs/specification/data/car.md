@@ -2,7 +2,6 @@
 title: Car
 ---
 
-<p>A schema describing a car</p>
 <h2>Primary Key</h2>
 <p>
   <code>url</code>
@@ -16,9 +15,9 @@ title: Car
   </colgroup>
   <thead>
     <tr>
-      <th>Fields</th>
+      <th>Columns</th>
       <th>Reference Resource</th>
-      <th>Reference Fields</th>
+      <th>Reference Columns</th>
     </tr>
   </thead>
   <tbody>
@@ -35,7 +34,7 @@ title: Car
     </tr>
   </tbody>
 </table>
-<h2>Fields</h2>
+<h2>Columns</h2>
 <table>
   <colgroup>
     <col width="20%"/>
@@ -58,12 +57,6 @@ title: Car
       </td>
       <td>
         <p>Unique identifier for the showroom where the car is located. If not provided the car is considered located at the dealers&#x27;s main address</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>showroom-downtown-123</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -77,19 +70,6 @@ title: Car
       </td>
       <td>
         <p>The title or name of the car listing</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>2023 Tesla Model 3 Long Range</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -103,22 +83,9 @@ title: Car
       </td>
       <td>
         <p>URL to the car listing</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>https://example.com/cars/tesla-model-3-2023</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>string</code>
+        <code>url</code>
       </td>
     </tr>
     <tr>
@@ -132,18 +99,8 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            required:
-            <code>true</code>
-          </li>
-          <li>
-            minimum:
+            minimum: 
             <code>0</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>45990</code>
           </li>
         </ul>
       </td>
@@ -159,19 +116,6 @@ title: Car
       </td>
       <td>
         <p>Currency of the price</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>EUR</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -188,19 +132,13 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            minimum:
+            minimum: 
             <code>1900</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>2023</code>
           </li>
         </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -214,18 +152,8 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            required:
-            <code>true</code>
-          </li>
-          <li>
-            minimum:
+            minimum: 
             <code>0</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>15000</code>
           </li>
         </ul>
       </td>
@@ -241,19 +169,6 @@ title: Car
       </td>
       <td>
         <p>Car brand/manufacturer</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>Tesla</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -267,19 +182,6 @@ title: Car
       </td>
       <td>
         <p>Car model name</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>Model 3</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -293,19 +195,6 @@ title: Car
       </td>
       <td>
         <p>Specific version or trim level</p>
-        <strong>Constraints</strong>
-        <ul>
-          <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>Long Range AWD</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -322,32 +211,8 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Categories</strong>
-        <ul>
-          <li>
-            <code>diesel</code>
-          </li>
-          <li>
-            <code>petrol</code>
-          </li>
-          <li>
-            <code>hybrid</code>
-          </li>
-          <li>
-            <code>electric</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>electric</code>
-          </li>
-          <li>
-            <code>petrol</code>
+            enum: 
+            <code>diesel, petrol, hybrid, electric</code>
           </li>
         </ul>
       </td>
@@ -366,26 +231,8 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Categories</strong>
-        <ul>
-          <li>
-            <code>manual</code>
-          </li>
-          <li>
-            <code>auto</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>auto</code>
-          </li>
-          <li>
-            <code>manual</code>
+            enum: 
+            <code>manual, auto</code>
           </li>
         </ul>
       </td>
@@ -404,44 +251,8 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Categories</strong>
-        <ul>
-          <li>
-            <code>small</code>
-          </li>
-          <li>
-            <code>estate</code>
-          </li>
-          <li>
-            <code>saloon</code>
-          </li>
-          <li>
-            <code>suv</code>
-          </li>
-          <li>
-            <code>van</code>
-          </li>
-          <li>
-            <code>sport</code>
-          </li>
-          <li>
-            <code>cabrio</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>suv</code>
-          </li>
-          <li>
-            <code>estate</code>
-          </li>
-          <li>
-            <code>sport</code>
+            enum: 
+            <code>small, estate, saloon, suv, van, sport, cabrio</code>
           </li>
         </ul>
       </td>
@@ -460,47 +271,8 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Categories</strong>
-        <ul>
-          <li>
-            <code>grey</code>
-          </li>
-          <li>
-            <code>black</code>
-          </li>
-          <li>
-            <code>white</code>
-          </li>
-          <li>
-            <code>blue</code>
-          </li>
-          <li>
-            <code>red</code>
-          </li>
-          <li>
-            <code>green</code>
-          </li>
-          <li>
-            <code>yellow</code>
-          </li>
-          <li>
-            <code>orange</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>white</code>
-          </li>
-          <li>
-            <code>black</code>
-          </li>
-          <li>
-            <code>blue</code>
+            enum: 
+            <code>grey, black, white, blue, red, green, yellow, orange</code>
           </li>
         </ul>
       </td>
@@ -519,29 +291,8 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            required:
-            <code>true</code>
-          </li>
-        </ul>
-        <strong>Categories</strong>
-        <ul>
-          <li>
-            <code>twothree</code>
-          </li>
-          <li>
-            <code>fourfive</code>
-          </li>
-          <li>
-            <code>sixseven</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>fourfive</code>
-          </li>
-          <li>
-            <code>twothree</code>
+            enum: 
+            <code>twothree, fourfive, sixseven</code>
           </li>
         </ul>
       </td>
@@ -557,15 +308,9 @@ title: Car
       </td>
       <td>
         <p>Engine power in horsepower</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>283</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -576,15 +321,9 @@ title: Car
       </td>
       <td>
         <p>Engine displacement in cubic centimeters</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>1998</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -595,15 +334,9 @@ title: Car
       </td>
       <td>
         <p>Number of seats</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>5</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -614,15 +347,9 @@ title: Car
       </td>
       <td>
         <p>Number of previous owners</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>1</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -636,23 +363,17 @@ title: Car
         <strong>Constraints</strong>
         <ul>
           <li>
-            minimum:
+            minimum: 
             <code>1</code>
           </li>
           <li>
-            maximum:
+            maximum: 
             <code>12</code>
-          </li>
-        </ul>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>6</code>
           </li>
         </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -663,15 +384,9 @@ title: Car
       </td>
       <td>
         <p>Warranty duration in months</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>24</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -682,15 +397,9 @@ title: Car
       </td>
       <td>
         <p>Electric vehicle range in kilometers</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>580</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -701,15 +410,9 @@ title: Car
       </td>
       <td>
         <p>Battery capacity in kWh for electric vehicles</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>75</code>
-          </li>
-        </ul>
       </td>
       <td>
-        <code>number</code>
+        <code>integer</code>
       </td>
     </tr>
     <tr>
@@ -720,12 +423,6 @@ title: Car
       </td>
       <td>
         <p>License plate number</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>AB-12-CD</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>
@@ -739,12 +436,6 @@ title: Car
       </td>
       <td>
         <p>Vehicle Identification Number</p>
-        <strong>Examples</strong>
-        <ul>
-          <li>
-            <code>5YJ3E1EA4KF123456</code>
-          </li>
-        </ul>
       </td>
       <td>
         <code>string</code>

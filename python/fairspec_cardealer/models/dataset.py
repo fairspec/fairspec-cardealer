@@ -2,55 +2,53 @@
 
 from __future__ import annotations
 
-from typing import Any, Literal, Mapping, Sequence, TypedDict, Union
+from typing import Any, Literal, Mapping, Sequence, Union
+
+from pydantic import BaseModel, Field, RootModel
 
 
-class CarResource(TypedDict):
+class CarResource(BaseModel):
     name: Literal['car']
-    data: Sequence[Mapping[str, Any]]
+    data: Sequence[Mapping[str, Any]] = Field(..., min_length=1)
     """
     Data items have to conform to the Car table schema
     """
-    schema: Literal[
-        'https://datisthq.github.io/cardealerdp/extension/v0.3.3/schemas/car.json'
+    tableSchema: Literal[
+        'https://fairspec.github.io/fairspec-cardealer/schemas/0.1.0/car.json'
     ]
 
 
-class DealerResource(TypedDict):
+class DealerResource(BaseModel):
     name: Literal['dealer']
-    data: Sequence[Mapping[str, Any]]
+    data: Sequence[Mapping[str, Any]] = Field(..., max_length=1, min_length=1)
     """
     Data items have to conform to the Dealer table schema
     """
-    schema: Literal[
-        'https://datisthq.github.io/cardealerdp/extension/v0.3.3/schemas/dealer.json'
+    tableSchema: Literal[
+        'https://fairspec.github.io/fairspec-cardealer/schemas/0.1.0/dealer.json'
     ]
 
 
-class ShowroomResource(TypedDict):
+class ShowroomResource(BaseModel):
     name: Literal['showroom']
-    data: Sequence[Mapping[str, Any]]
+    data: Sequence[Mapping[str, Any]] = Field(..., min_length=1)
     """
     Data items have to conform to the Showroom table schema
     """
-    schema: Literal[
-        'https://datisthq.github.io/cardealerdp/extension/v0.3.3/schemas/showroom.json'
+    tableSchema: Literal[
+        'https://fairspec.github.io/fairspec-cardealer/schemas/0.1.0/showroom.json'
     ]
 
 
-Resource = Union[CarResource, DealerResource, ShowroomResource]
+class Resource(RootModel[Union[CarResource, DealerResource, ShowroomResource]]):
+    root: Union[CarResource, DealerResource, ShowroomResource]
 
 
-Package = TypedDict(
-    'Package',
-    {
-        '$schema': Literal[
-            'https://datisthq.github.io/cardealerdp/extension/v0.3.3/profile.json'
-        ],
-        'resources': Sequence[Resource],
-    },
-)
+class Dataset(BaseModel):
+    field_schema: Literal[
+        'https://fairspec.github.io/fairspec-cardealer/profiles/0.1.0/dataset.json'
+    ] = Field(..., alias='$schema')
+    resources: Sequence[Resource] = Field(..., min_length=1)
 
 
-class CarDealerDataPackageProfile(Package):
-    pass
+FairspecCardealerProfile = Dataset
