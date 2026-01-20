@@ -4,9 +4,9 @@ sidebar:
   order: 1
 ---
 
-Cardealer DP (Car Dealer Data Package) is a data exchange format that helps car dealerships share their car listings. It is developed on top of the Data Package standard.
+Fairspec Cardealer is a data exchange format for car dealerships. It is developed on top of the Fairspec standard.
 
-## Why Cardealer DP?
+## Why Fairspec Cardealer?
 
 The automotive industry lacks a standardized format for exchanging car listing data between dealerships, marketplaces, and aggregation platforms. This creates several challenges:
 
@@ -15,31 +15,31 @@ The automotive industry lacks a standardized format for exchanging car listing d
 - **Limited interoperability**: Aggregators must maintain custom integrations for each data source
 - **Data quality issues**: Without clear schemas, data validation and quality control are challenging
 
-Cardealer DP solves these problems by providing a **standardized, validated, and extensible format** for sharing car dealership data. Built on the proven [Data Package](https://datapackage.org/) standard, it ensures data is machine-readable, well-documented, and easy to integrate.
+Fairspec Cardealer solves these problems by providing a **standardized, validated, and extensible format** for sharing car dealership data. Built on the proven [Fairspec](https://fairspec.org/) standard, it ensures data is machine-readable, well-documented, and easy to integrate.
 
-## Structure of a Cardealer DP File
+## Structure of a Fairspec Cardealer File
 
-A Cardealer DP file is a JSON document that follows the Data Package specification. The file contains metadata about the package and one or more data resources describing the dealer, its showrooms, and its cars.
+A Fairspec Cardealer file is a JSON document that follows the Fairspec specification. The file contains metadata about the package and one or more data resources describing the dealer, its showrooms, and its cars.
 
 ### Basic Structure
 
 ```json
 {
-  "$schema": "https://datisthq.github.io/cardealerdp/extension/<version>/profile.json",
+  "$schema": "https://fairspec.github.io/fairspec-cardealer/profiles/<version>/dataset.json",
   "resources": [
     {
       "name": "car",
-      "schema": "https://datisthq.github.io/cardealerdp/extension/<version>/schemas/car.json",
+      "schema": "https://fairspec.github.io/fairspec-cardealer/schemas/<version>/car.json",
       "data": [{...}, {...}, {...}]
     },
     {
       "name": "dealer",
-      "schema": "https://datisthq.github.io/cardealerdp/extension/<version>/schemas/dealer.json",
+      "schema": "https://fairspec.github.io/fairspec-cardealer/schemas/<version>/dealer.json",
       "data": [{...}]
     },
     {
       "name": "showroom",
-      "schema": "https://datisthq.github.io/cardealerdp/extension/<version>/schemas/showroom.json",
+      "schema": "https://fairspec.github.io/fairspec-cardealer/schemas/<version>/showroom.json",
       "data": [{...}, {...}]
     }
   ]
@@ -48,7 +48,7 @@ A Cardealer DP file is a JSON document that follows the Data Package specificati
 
 ### Key Components
 
-1. **Profile**: References the Cardealer DP profile that defines the structure and validation rules
+1. **Profile**: References the Fairspec Cardealer profile that defines the structure and validation rules
 2. **Resources**: An array containing 1-3 resources:
    - **dealer** (required): Information about the car dealership (exactly 1 item)
    - **car** (optional): Array of car listings offered by the dealer

@@ -6,7 +6,7 @@
     { "$ref": "#/$defs/Dataset" }
   ],
   "$defs": {
-    "Package": {
+    "Dataset": {
       "type": "object",
       "required": ["$schema", "resources"],
       "properties": {

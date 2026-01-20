@@ -4,24 +4,24 @@ sidebar:
   order: 2
 ---
 
-Cardealer DP provides SDKs for Python and TypeScript/JavaScript to make it easy to publish and consume Car Dealer Data Packages.
+Fairspec Cardealer provides SDKs for Python and TypeScript/JavaScript to make it easy to publish and consume datasets.
 
 ## Python
 
 > [!NOTE]
-> In addition to the Python SDK, we recommend using [frictionless-py](https://framework.frictionlessdata.io/) to manage your data packages. For example, using it you can publish your data pacakge directory to Zenodo instead of saving it locally, as well, as consume it from a remote server.
+> In addition to the Python SDK, we recommend using [Fairspec Python](https://github.com/fairspec/fairspec-python) to manage your datasets. For example, using it you can publish your data package directory to Zenodo instead of saving it locally, as well as consume it from a remote server.
 
 ### Installation
 
 ```bash
-pip install cardealerdp frictionless
+pip install fairspec fairspec-extension
 ```
 
 ### Publication
 
 ```python
-from cardealerdp import Package, Car, Dealer
-import frictionless
+from fairspec_extension import Dataset, Dealer, Car
+from fairspec import saveDatasetDescriptor
 
 # Create dealer information
 dealer = Dealer(
@@ -60,61 +60,61 @@ car = Car(
     battery=75,
 )
 
-package = Package(
+dataset = Dataset(
     {
-        "$schema": "https://datisthq.github.io/cardealerdp/extension/v0.3.3/profile.json",
+        "$schema": "https://fairspec.github.io/fairspec-cardealer/profiles/0.2.0/dataset.json",
         "resources": [
             {
                 "name": "car",
                 "data": [car],
-                "schema": "https://datisthq.github.io/cardealerdp/extension/v0.3.3/schemas/car.json",
+                "schema": "https://fairspec.github.io/fairspec-cardealer/schemas/0.2.0/car.json",
             },
             {
                 "name": "dealer",
                 "data": [dealer],
-                "schema": "https://datisthq.github.io/cardealerdp/extension/v0.3.3/schemas/dealer.json",
+                "schema": "https://fairspec.github.io/fairspec-cardealer/schemas/0.2.0/dealer.json",
             },
         ],
     }
 )
 
-frictionless.Package(package).to_json("cardealer.json")
+saveDatasetDescriptor(dataset, path="dataset.json")
 ```
 
 ### Validation
 
 ```python
-import frictionless
+from fairspec import validateDataset
 
-report = frictionless.validate("cardealer.json")
+report = validateDataset("dataset.json")
 print(report)
 ```
 
 ### Consumption
 
 ```python
-import frictionless
+from fairspec import loadDatasetDescriptor
 
-package = frictionless.Package("cardealer.json")
-print(package)
+dataset = loadDatasetDescriptor("dataset.json")
+print(dataset)
 ```
 
 ## TypeScript
 
 > [!NOTE]
-> In addition to the TypeScript SDK, we recommend using [frictionless-ts](https://github.com/frictionlessdata/frictionless-ts) to manage your data packages. For example, using it you can publish your data pacakge directory to Zenodo instead of saving it locally, as well, as consumte it from a remote server.
+> In addition to the TypeScript SDK, we recommend using [Fairspec TypeScript](https://github.com/fairspec/fairspec-typescript) to manage your datasets. For example, using it you can publish your data package directory to Zenodo instead of saving it locally, as well as consume it from a remote server.
 
 ### Installation
 
 ```bash
-npm install cardealerdp frictionless-ts
+npm install fairspec fairspec-extension
 ```
 
 ### Publication
 
 ```typescript
-import type { Car, Dealer, Package } from "cardealerdp";
-import { savePackageDescriptor } from "frictionless-ts";
+import type { Car, Dealer, Package } from "fairspec-cardealer";
+import { savePackageDescriptor } from "fairspec";
 
 const dealer: Dealer = {
 	title: "Premium Auto Sales",
@@ -151,27 +151,27 @@ const car: Car = {
 	battery: 75,
 };
 
-const dataPackage: Package = {
+const dataset: Dataset = {
 	$schema:
-		"https://datisthq.github.io/cardealerdp/extension/v0.3.3/profile.json",
+		"https://fairspec.github.io/fairspec-cardealer/profiles/0.2.0/dataset.json",
 	resources: [
 		{
 			name: "car",
 			data: [car],
 			schema:
-				"https://datisthq.github.io/cardealerdp/extension/v0.3.3/schemas/car.json",
+				"https://fairspec.github.io/fairspec-cardealer/schemas/0.2.0/car.json",
 		},
 		{
 			name: "dealer",
 			data: [dealer],
 			schema:
-				"https://datisthq.github.io/cardealerdp/extension/v0.3.3/schemas/dealer.json",
+				"https://fairspec.github.io/fairspec-cardealer/schemas/0.2.0/dealer.json",
 		},
 	],
 };
 
-await savePackageDescriptor(dataPackage, {
-	path: "cardealer.json",
+await saveDatasetDescriptor(dataset, {
+	path: "dataset.json",
 	overwrite: true,
 });
 ```
@@ -179,17 +179,17 @@ await savePackageDescriptor(dataPackage, {
 ### Validation
 
 ```typescript
-import { validatePackage } from "frictionless-ts";
+import { validateDataset } from "fairspec";
 
-const { valid, errors } = await validatePackage("cardealer.json");
+const { valid, errors } = await validateDataset("dataset.json");
 console.log(valid, errors);
 ```
 
 ### Consumption
 
 ```typescript
-import { loadPackageDescriptor } from "frictionless-ts";
+import { loadDatasetDescriptor } from "fairspec";
 
-const dataPackage = await loadPackageDescriptor("cardealer.json");
-console.log(dataPackage);
+const dataset = await loadDatasetDescriptor("dataset.json");
+console.log(dataset);
 ```
