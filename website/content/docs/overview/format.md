@@ -55,6 +55,7 @@ A Fairspec Cardealer file is a JSON document that follows the Fairspec specifica
    - **showroom** (optional): Array of physical showroom locations
 
 Each resource includes:
+
 - **name**: The resource type identifier (`"dealer"`, `"car"`, or `"showroom"`)
 - **schema**: URL pointing to the JSON schema that validates the data structure
 - **data**: An array of data items conforming to the schema
@@ -62,6 +63,7 @@ Each resource includes:
 ### Data Relationships
 
 The resources are connected through foreign keys:
+
 - Cars can reference a specific **showroom** via `showroomId`
 - If no `showroomId` is provided, the car is assumed to be at the dealer's main address
 - Each showroom belongs to a dealer

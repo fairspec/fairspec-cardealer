@@ -139,7 +139,7 @@ A dealer with a main location and additional showrooms, with cars distributed ac
           "email": "berkeley@elitemotors.com",
           "url": "https://www.elitemotors.com/berkeley",
           "lat": 37.8715,
-          "lon": -122.2730
+          "lon": -122.273
         }
       ]
     },
