@@ -1,7 +1,7 @@
 {
   "name": "fairspec-cardealer",
   "version": "0.4.0",
-  "description": "Fairspec Cardealer is a data exchange format for car dealerships. It is developed on top of the Fairspec standard",
+  "description": "Fairspec cardealer extension",
   "homepage": "https://fairspec.github.io/fairspec-cardealer",
   "license": "MIT",
   "author": "Evgeny Karev",

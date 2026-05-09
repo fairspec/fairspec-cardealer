@@ -1,5 +1,6 @@
 ---
 title: Car
+path: /specification/data/car/
 ---
 
 <h2>Primary Key</h2>

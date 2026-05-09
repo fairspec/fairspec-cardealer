@@ -1,7 +1,8 @@
 ---
 title: Examples
-sidebar:
-  order: 3
+path: /overview/examples/
+icon: file-json-2
+order: 3
 ---
 
 This page provides examples of Cardealer DP files for different scenarios.

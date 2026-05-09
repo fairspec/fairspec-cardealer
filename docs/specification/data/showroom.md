@@ -1,10 +1,11 @@
 ---
-title: Dealer
+title: Showroom
+path: /specification/data/showroom/
 ---
 
 <h2>Primary Key</h2>
 <p>
-  <code>url</code>
+  <code>id</code>
 </p>
 <h2>Columns</h2>
 <table>
@@ -22,13 +23,26 @@ title: Dealer
   </thead>
   <tbody>
     <tr>
+      <td id="id">
+        <code>
+          <strong>id</strong>
+        </code>
+      </td>
+      <td>
+        <p>Unique identifier of the showroom</p>
+      </td>
+      <td>
+        <code>string</code>
+      </td>
+    </tr>
+    <tr>
       <td id="title">
         <code>
           <strong>title</strong>
         </code>
       </td>
       <td>
-        <p>The name of the dealer</p>
+        <p>The name of the showroom</p>
       </td>
       <td>
         <code>string</code>
@@ -41,7 +55,7 @@ title: Dealer
         </code>
       </td>
       <td>
-        <p>Country where the dealer is located</p>
+        <p>Country where the showroom is located</p>
       </td>
       <td>
         <code>string</code>
@@ -67,7 +81,7 @@ title: Dealer
         </code>
       </td>
       <td>
-        <p>Closest city where the dealer is located</p>
+        <p>Closest city where the showroom is located</p>
       </td>
       <td>
         <code>string</code>
@@ -80,7 +94,7 @@ title: Dealer
         </code>
       </td>
       <td>
-        <p>Street address of the dealer</p>
+        <p>Street address of the showroom</p>
       </td>
       <td>
         <code>string</code>
@@ -93,7 +107,7 @@ title: Dealer
         </code>
       </td>
       <td>
-        <p>Postal code of the dealer location</p>
+        <p>Postal code of the showroom location</p>
       </td>
       <td>
         <code>string</code>
@@ -106,7 +120,7 @@ title: Dealer
         </code>
       </td>
       <td>
-        <p>Contact phone number for the dealer</p>
+        <p>Contact phone number for the showroom</p>
       </td>
       <td>
         <code>string</code>
@@ -119,7 +133,7 @@ title: Dealer
         </code>
       </td>
       <td>
-        <p>Contact email address for the dealer</p>
+        <p>Contact email address for the showroom</p>
       </td>
       <td>
         <code>email</code>
@@ -128,11 +142,11 @@ title: Dealer
     <tr>
       <td id="url">
         <code>
-          <strong>url</strong>
+          <strong>url?</strong>
         </code>
       </td>
       <td>
-        <p>URL to the dealer website</p>
+        <p>URL to the showroom</p>
       </td>
       <td>
         <code>url</code>
@@ -145,7 +159,7 @@ title: Dealer
         </code>
       </td>
       <td>
-        <p>Longitude coordinate of the dealer location</p>
+        <p>Longitude coordinate of the showroom location</p>
       </td>
       <td>
         <code>number</code>
@@ -158,7 +172,7 @@ title: Dealer
         </code>
       </td>
       <td>
-        <p>Latitude coordinate of the dealer location</p>
+        <p>Latitude coordinate of the showroom location</p>
       </td>
       <td>
         <code>number</code>
