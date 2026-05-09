@@ -1,7 +1,7 @@
 import { defineConfig } from "livemark"
 import packageJson from "./package.json" with { type: "json" }
 
-const { origin } = new URL(packageJson.homepage)
+const { origin, pathname } = new URL(packageJson.homepage)
 
 export default defineConfig({
   site: origin,
