@@ -8,7 +8,8 @@
   "repository": "https://github.com/fairspec/fairspec-cardealer",
   "type": "module",
   "scripts": {
-    "build": "tsgo"
+    "build": "tsgo",
+    "type": "tsgo --noEmit"
   },
   "dependencies": {
     "@fairspec/metadata": "^0.2.2",

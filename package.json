@@ -8,10 +8,9 @@
   "repository": "https://github.com/fairspec/fairspec-cardealer",
   "type": "module",
   "scripts": {
-    "deps": "ncu -ws -u",
     "build:py": "uv --directory python build",
     "build:ts": "pnpm -F fairspec-* build",
-    "clean": "rm -rf **/node_modules",
+    "deps": "ncu -ws -u",
     "configure": "node @configure.ts",
     "docs:build": "livemark build",
     "docs:start": "livemark start",
