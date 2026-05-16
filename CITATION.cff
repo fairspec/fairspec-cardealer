@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: Fairspec Cardealer
+abstract: Example Fairspec extension for the car dealership domain.
+authors:
+  - family-names: Karev
+    given-names: Evgeny
+    email: eskarev@gmail.com
+url: "https://fairspec.github.io/fairspec-cardealer"
+repository-code: "https://github.com/fairspec/fairspec-cardealer"
+license: MIT
+keywords:
+  - fair
+  - data
+  - metadata
+  - datacite
+  - json-schema
