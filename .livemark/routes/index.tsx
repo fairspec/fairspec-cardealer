@@ -54,9 +54,8 @@ function Hero() {
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Fairspec Cardealer is a data exchange format that helps car
-          dealerships share their car listings — built on top of the Fairspec
-          standard.
+          Fairspec Cardealer is a data exchange format that helps car dealerships share
+          their car listings — built on top of the Fairspec standard.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -187,9 +186,7 @@ function FeatureCard({ icon: Icon, title, description }: Feature) {
         <Icon className="size-5" />
       </div>
       <h3 className="text-lg font-semibold text-foreground">{title}</h3>
-      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-        {description}
-      </p>
+      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{description}</p>
     </div>
   )
 }
@@ -224,8 +221,7 @@ function CardealerSample() {
         <span className={tk.punct}>{"{"}</span>
         {"\n      "}
         <span className={tk.key}>"name"</span>
-        <span className={tk.punct}>:</span>{" "}
-        <span className={tk.str}>"dealer"</span>
+        <span className={tk.punct}>:</span> <span className={tk.str}>"dealer"</span>
         <span className={tk.punct}>,</span>
         {"\n      "}
         <span className={tk.key}>"schema"</span>
@@ -246,8 +242,7 @@ function CardealerSample() {
         <span className={tk.punct}>,</span>
         {"\n          "}
         <span className={tk.key}>"city"</span>
-        <span className={tk.punct}>:</span>{" "}
-        <span className={tk.str}>"Los Angeles"</span>
+        <span className={tk.punct}>:</span> <span className={tk.str}>"Los Angeles"</span>
         <span className={tk.punct}>,</span>
         {"\n          "}
         <span className={tk.key}>"url"</span>
@@ -263,8 +258,7 @@ function CardealerSample() {
         <span className={tk.punct}>{"{"}</span>
         {"\n      "}
         <span className={tk.key}>"name"</span>
-        <span className={tk.punct}>:</span>{" "}
-        <span className={tk.str}>"car"</span>
+        <span className={tk.punct}>:</span> <span className={tk.str}>"car"</span>
         <span className={tk.punct}>,</span>
         {"\n      "}
         <span className={tk.key}>"schema"</span>
@@ -285,8 +279,7 @@ function CardealerSample() {
         <span className={tk.punct}>,</span>
         {"\n          "}
         <span className={tk.key}>"brand"</span>
-        <span className={tk.punct}>:</span>{" "}
-        <span className={tk.str}>"BMW"</span>
+        <span className={tk.punct}>:</span> <span className={tk.str}>"BMW"</span>
         <span className={tk.punct}>,</span>
         {"\n          "}
         <span className={tk.key}>"model"</span>
@@ -299,8 +292,7 @@ function CardealerSample() {
         <span className={tk.punct}>,</span>
         {"\n          "}
         <span className={tk.key}>"price"</span>
-        <span className={tk.punct}>:</span>{" "}
-        <span className={tk.num}>76000</span>
+        <span className={tk.punct}>:</span> <span className={tk.num}>76000</span>
         {"\n        "}
         <span className={tk.punct}>{"}"}</span>
         {"\n      "}
@@ -326,8 +318,8 @@ function Showcase() {
               One JSON file. Every car listing.
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Describe your dealer, your showrooms, and your cars in a single
-              file — validated against shared schemas.
+              Describe your dealer, your showrooms, and your cars in a single file —
+              validated against shared schemas.
             </p>
           </div>
         </Reveal>
@@ -361,8 +353,8 @@ function FinalCta() {
             <span className="text-primary">Start with one JSON file.</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Read the format, drop in an example, and have your dealer feed
-            shareable in minutes.
+            Read the format, drop in an example, and have your dealer feed shareable in
+            minutes.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

@@ -104,16 +104,7 @@
       "type": "string",
       "description": "Exterior color",
       "examples": ["white"],
-      "enum": [
-        "grey",
-        "black",
-        "white",
-        "blue",
-        "red",
-        "green",
-        "yellow",
-        "orange"
-      ]
+      "enum": ["grey", "black", "white", "blue", "red", "green", "yellow", "orange"]
     },
     "door": {
       "type": "string",

@@ -153,20 +153,17 @@ const car: Car = {
 }
 
 const dataset: Dataset = {
-  $schema:
-    "https://fairspec.github.io/fairspec-cardealer/profiles/0.2.0/dataset.json",
+  $schema: "https://fairspec.github.io/fairspec-cardealer/profiles/0.2.0/dataset.json",
   resources: [
     {
       name: "car",
       data: [car],
-      schema:
-        "https://fairspec.github.io/fairspec-cardealer/schemas/0.2.0/car.json",
+      schema: "https://fairspec.github.io/fairspec-cardealer/schemas/0.2.0/car.json",
     },
     {
       name: "dealer",
       data: [dealer],
-      schema:
-        "https://fairspec.github.io/fairspec-cardealer/schemas/0.2.0/dealer.json",
+      schema: "https://fairspec.github.io/fairspec-cardealer/schemas/0.2.0/dealer.json",
     },
   ],
 }
