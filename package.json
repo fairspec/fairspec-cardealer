@@ -5,7 +5,7 @@
   "description": "Fairspec cardealer extension",
   "homepage": "https://fairspec.github.io/fairspec-cardealer",
   "author": "Evgeny Karev",
-  "repository": "https://github.com/fairspec/fairspec-cardealer",
+  "repository": "https://github.com/datisthq/fairspec-cardealer",
   "type": "module",
   "scripts": {
     "build:py": "uv --directory python build",

@@ -5,7 +5,7 @@
   "homepage": "https://fairspec.github.io/fairspec-cardealer",
   "license": "MIT",
   "author": "Evgeny Karev",
-  "repository": "https://github.com/fairspec/fairspec-cardealer",
+  "repository": "https://github.com/datisthq/fairspec-cardealer",
   "type": "module",
   "scripts": {
     "build": "tsgo",

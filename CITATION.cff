@@ -8,7 +8,7 @@ authors:
     given-names: Evgeny
     email: eskarev@gmail.com
 url: "https://fairspec.github.io/fairspec-cardealer"
-repository-code: "https://github.com/fairspec/fairspec-cardealer"
+repository-code: "https://github.com/datisthq/fairspec-cardealer"
 license: MIT
 keywords:
   - fair
